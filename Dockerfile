@@ -1,6 +1,6 @@
 FROM eclipse-temurin:17-jdk AS builder
 
-WORKDIR/app
+WORKDIR /app
 
 COPY . .
 
