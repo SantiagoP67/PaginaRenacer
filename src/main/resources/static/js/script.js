@@ -1,25 +1,27 @@
+// Carrusel de imágenes (Quienes Somos)
 document.addEventListener('DOMContentLoaded', () => {
     const slide = document.querySelector('.carrusel-slide');
     const images = document.querySelectorAll('.imagen-carrusel');
     let counter = 0;
-    const size = images[0].clientWidth;
-    const intervalTime = 5000;
+    const size = images[0].clientWidth;//Depende del ancho viewport inicial
+    const intervalTime = 5000;//Intervalo de 5 segundos
 
-    // Configuración inicial
+    //Posicionamiento inicial
     slide.style.transform = `translateX(${-size * counter}px)`;
 
-    // Función para desplazar
+    //Función para desplazar
     function autoSlide() {
+        //Lógica de reinicio del contador
         if (counter >= images.length - 1) counter = -1;
         counter++;
         slide.style.transform = `translateX(${-size * counter}px)`;
-        slide.style.transition = "transform 0.5s ease-in-out";
+        slide.style.transition = "transform 0.5s ease-in-out"; //Transición suave
     }
 
-    // Intervalo automático
+    //Interacción con hover
     let interval = setInterval(autoSlide, intervalTime);
 
-    // Pausar al hacer hover
+    //Pausar al hacer hover
     slide.parentElement.addEventListener('mouseenter', () => {
         clearInterval(interval);
     });
@@ -30,6 +32,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+
+// Carrusel de Videos (Testimonios)
 const slidesContainer = document.querySelector('.carrusel-videos');
 const videoSlides = document.querySelectorAll('.video-slide');
 const btnAnterior = document.getElementById('btn-anterior');
@@ -40,11 +44,13 @@ const totalVideos = videoSlides.length;
 const cantidadVisible = 3;
 
 function actualizarCarrusel() {
+    //Cálculo basado en ancho real + gap
     const anchoSlide = videoSlides[0].offsetWidth + 20; // Ancho + gap
     const offset = indiceActual * anchoSlide;
-    slidesContainer.style.transform = `translateX(-${offset}px)`;
+    slidesContainer.style.transform = `translateX(-${offset}px)`;//Desplazamiento horizontal
 }
 
+// 11. Navegación manual
 btnAnterior.addEventListener('click', () => {
     if (indiceActual > 0) {
         indiceActual--;
@@ -69,7 +75,7 @@ videos.forEach(video => {
     });
 });
 
-
+// Formulario de Contacto (Únete)
 const form = document.getElementById('formularioContacto');
 
 form.addEventListener('submit', async (e) => {
@@ -78,6 +84,7 @@ form.addEventListener('submit', async (e) => {
     const formData = new FormData(form);
     const btnEnviar = document.querySelector('.btn-enviar');
 
+    //Feedback visual durante envío
     btnEnviar.textContent = 'Enviando...';
     btnEnviar.disabled = true;
 
@@ -92,12 +99,12 @@ form.addEventListener('submit', async (e) => {
 
         if (response.ok) {
             alert('¡Postulación enviada con éxito!');
-            form.reset();
+            form.reset();// Limpia formulari
         } else {
             throw new Error('Error en el envío');
         }
     } catch (error) {
-        alert('Error al enviar, intenta nuevamente');
+        alert('Error al enviar, intenta nuevamente');//Manejo genérico
     } finally {
         btnEnviar.textContent = 'Enviar postulación';
         btnEnviar.disabled = false;

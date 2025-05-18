@@ -14,8 +14,6 @@ import java.util.stream.Collectors;
 
 @Controller
 public class IndexController {
-
-
     @GetMapping("/")
     public String index(Model model) {
         return "index";

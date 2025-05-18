@@ -1,10 +1,14 @@
+/* Reset y estilos base */
+/* ------------------- */
+/* Reset universal para márgenes, padding y box model */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
-
+/* Header fijo */
 header {
     display: flex;
     align-items: center;
@@ -217,6 +221,9 @@ section:not(:first-child) {
     transform: scale(1.1);
 }
 
+
+
+/* seccion quienes somos */
 .quienes-somos-section {
     padding: 4rem 1rem;
     background-color: #fef3ed;

@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
+    <!-- Metadatos de codificación y vista responsiva -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Enlace a hoja de estilos -->
     <link rel="stylesheet" href="../css/style.css">
     <title>Pagina Principal</title>
 </head>
 <body>
 <header>
+    <!-- Contenedor del logo con nombre de la fundación -->
     <div class="logo-container">
         <img src="/media/images/fondo_blanco.png" alt="Logo Fundación">
         <span>Fundación<br>Renacer y Espíritu Libre</span>
     </div>
+    <!-- Menú de navegación principal -->
     <nav>
         <ul>
             <li><a href="#inicio">inicio</a></li>
@@ -20,6 +25,7 @@
             <li><a href="#contacto">contáctanos</a></li>
         </ul>
     </nav>
+    <!-- Botón para hacer donaciones vía WhatsApp -->
     <a href="https://wa.me/573104772733?text=Hola,%20Fundación%20Renacer%20y%20Espíritu%20Libre.%20Me%20gustaría%20realizar%20una%20donación.%20Por%20favor,%20podrian%20indícarme%20los%20datos%20bancarios%20o%20medios%20de%20pago%20disponibles." class="btn-ayuda" target="_blank">
         <img src="/media/images/icono_corazon.png" alt="Corazón">
         ayúdanos
@@ -27,21 +33,28 @@
 </header>
 
 <main>
+    <!-- Sección de inicio con visión, misión y valores -->
     <section id="inicio">
         <div class="container">
             <div class="image-container">
                 <img src="/media/images/imagen principal.jpg" alt="Imagen Grande">
+                <!-- Superposición con visión, misión y valores -->
                 <div class="overlay">
+                    <!-- Bloque de Visión -->
                     <div class="text-container" id="vision">
                         <img src="/media/images/vision.png" alt="Visión">
                         <h2>Visión</h2><br><br>
                         <P>Ser reconocidos como un referente en la construcción de una sociedad solidaria, justa e incluyente, donde cada persona sin importar su pasado pueda acceder a condiciones de vida dignas. Trabajamos para empoderar a individuos y familias, fomentando su autonomía, resiliencia y participación activa en el bienestar colectivo, siempre guiados por los principios cristianos de amor, esperanza y reconciliación.</P>
                     </div>
+
+                    <!-- Bloque de Misión -->
                     <div class="text-container" id="mision">
                         <img src="/media/images/Mision.png" alt="Misión">
                         <h2>Misión</h2><br><br>
                         <P>Nuestra misión es brindar herramientas integrales para el desarrollo personal y profesional de personas que enfrentan o han enfrentado situaciones adversas, especialmente aquellas vinculadas al sistema penitenciario y contextos de vulnerabilidad. A través de una atención centrada en la dignidad humana, ofrecemos acompañamiento psicosocial, jurídico, médico y espiritual, creyendo firmemente en las segundas oportunidades y en la capacidad de transformación individual para construir vidas plenas y contributivas.</P>
                     </div>
+
+                    <!-- Bloque de Valores -->
                     <div class="text-container" id="valores">
                         <img src="/media/images/Valores.png" alt="Valores">
                         <h2>Valores</h2><br><br>
@@ -51,10 +64,13 @@
             </div>
         </div>
     </section>
+
+    <!-- Sección "¿Quiénes somos?" -->
     <section id="conocenos" class="quienes-somos-section">
         <div class="contenedor-flex">
             <!-- Bloque de texto -->
             <div class="texto-content">
+                <!-- Texto explicativo de la fundación -->
                 <h2 class="titulo-destacado">¿Quiénes somos?</h2>
                 <div class="descripcion-box">
                     <p class="texto-destacado">
@@ -83,8 +99,12 @@
 
         </div>
     </section>
+
+
+    <!-- Sección de servicios ofrecidos -->
     <section id="servicios" class="services-section">
         <h2>Nuestros servicios a la comunidad</h2> <br>
+        <!-- Tarjeta: Fortalecimiento espiritual -->
         <div class="services-container">
             <div class="service-card">
                 <div class="card-inner">
@@ -137,10 +157,13 @@
             </div>
         </div>
     </section>
+
+    <!-- Sección de testimonios en formato de video -->
     <section class="testimonios-section">
         <h2>Testimonios</h2>
         <div class="carrusel-container">
             <button class="carrusel-btn" id="btn-anterior">&#8249;</button>
+            !-- Carrusel de videos -->
             <div class="carrusel-video-wrapper">
                 <div class="carrusel-videos">
                     <div class="video-slide"><video src="/media/videos/testimonio1.mp4" controls></video></div>
@@ -179,6 +202,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- Formulario -->
                 <form id="formularioContacto" class="formulario-contacto">
                     <div class="form-group">
                         <input type="text" id="nombre" name="nombre" required>
@@ -207,6 +231,7 @@
                     <button type="submit" class="btn-enviar">Enviar postulación</button>
                 </form>
             </div>
+            <!-- Mapa con la ubicación de la empresa -->
             <div class="mapa-columna">
                 <div class="mapa-container" id="mapa">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3977.0498368992876!2d-74.10911488871487!3d4.585076842628311!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f98d92a8cb3d3%3A0x622ce884cb950cff!2sCra.%2024C%20%2322-73%2C%20Bogot%C3%A1!5e0!3m2!1sen!2sco!4v1745592720727!5m2!1sen!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -217,16 +242,12 @@
             </div>
         </div>
     </section>
-
+    <!-- Boton A whattsap -->
     <a href="https://wa.me/573104772733" class="whatsapp-button" target="_blank">
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
     </a>
-
 </main>
-
-<footer>
-
-</footer>
+<!-- Conexion a js -->
 <script src="/js/script.js"></script>
 </body>
 </html>
